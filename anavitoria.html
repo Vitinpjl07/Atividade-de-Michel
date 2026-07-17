@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANAVITÓRIA - Cantora Brasileira</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>ANAVITÓRIA</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#musicas">Músicas</a></li>
+                <li><a href="#albuns">Álbuns</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo ao Universo de ANAVITÓRIA</h2>
+            <p>Conheça a história e a música da artista mais aclamada da música brasileira</p>
+            <button class="btn-hero" onclick="scrollToSection('sobre')">Descubra Mais</button>
+        </div>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2>Sobre ANAVITÓRIA</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        ANAVITÓRIA é uma cantora e compositora brasileira conhecida por sua voz única e letras profundas.
+                        Nascida em Brasília, ela conquistou o coração do público com sua musicalidade autêntica e presença marcante.
+                    </p>
+                    <p>
+                        Com uma carreira em ascensão, ANAVITÓRIA tem se destacado no cenário musical brasileiro,
+                        participando de diversos festivais de música e colaborações com artistas renomados.
+                    </p>
+                    <p>
+                        Sua música é caracterizada por poesia lírica, elementos de MPB e uma sensibilidade única
+                        que a diferencia no panorama musical contemporâneo.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="placeholder-image">
+                        🎤 ANAVITÓRIA 🎵
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Músicas Populares -->
+    <section id="musicas" class="songs">
+        <div class="container">
+            <h2>Músicas Populares</h2>
+            <div class="songs-grid">
+                <div class="song-card" onclick="playSong('Ele e Eu')">
+                    <div class="song-icon">🎵</div>
+                    <h3>Ele e Eu</h3>
+                    <p>Uma música envolvente sobre relacionamentos</p>
+                </div>
+                <div class="song-card" onclick="playSong('Barrado')">
+                    <div class="song-icon">🎵</div>
+                    <h3>Barrado</h3>
+                    <p>Hit de sucesso nas paradas musicais</p>
+                </div>
+                <div class="song-card" onclick="playSong('Dia Bonito')">
+                    <div class="song-icon">🎵</div>
+                    <h3>Dia Bonito</h3>
+                    <p>Uma música inspiradora e positiva</p>
+                </div>
+                <div class="song-card" onclick="playSong('Sua Graça')">
+                    <div class="song-icon">🎵</div>
+                    <h3>Sua Graça</h3>
+                    <p>Reflexão profunda sobre fé e esperança</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Álbuns -->
+    <section id="albuns" class="albums">
+        <div class="container">
+            <h2>Álbuns e Projetos</h2>
+            <div class="albums-list">
+                <div class="album-item">
+                    <div class="album-cover">📀</div>
+                    <div class="album-info">
+                        <h3>Álbum 1</h3>
+                        <p>Ano de lançamento: 2020</p>
+                        <p>Gênero: MPB/Pop</p>
+                    </div>
+                </div>
+                <div class="album-item">
+                    <div class="album-cover">📀</div>
+                    <div class="album-info">
+                        <h3>Álbum 2</h3>
+                        <p>Ano de lançamento: 2022</p>
+                        <p>Gênero: MPB/Indie</p>
+                    </div>
+                </div>
+                <div class="album-item">
+                    <div class="album-cover">📀</div>
+                    <div class="album-info">
+                        <h3>Álbum 3</h3>
+                        <p>Ano de lançamento: 2024</p>
+                        <p>Gênero: Pop/Eletrônico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form class="contact-form" onsubmit="enviarFormulario(event)">
+                <div class="form-group">
+                    <input type="text" id="nome" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Seu Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+            <div id="mensagem-sucesso" class="mensagem-sucesso" style="display:none;">
+                Mensagem enviada com sucesso! ✓
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ANAVITÓRIA - Todos os direitos reservados</p>
+            <div class="social-links">
+                <a href="#" onclick="abrirRede('instagram')">Instagram</a>
+                <a href="#" onclick="abrirRede('spotify')">Spotify</a>
+                <a href="#" onclick="abrirRede('youtube')">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
